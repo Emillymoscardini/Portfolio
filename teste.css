@@ -1,0 +1,411 @@
+/* Corpo do site */
+body {
+    background-color: #f3e5f5;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.titulo1 {
+    text-align: center;
+    color: #ffffff ;
+    text-shadow: 2px 2px 4px black;
+    margin: 0;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#header {
+    background-color: #D36DA8;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#menu a, #menu button {
+    transition: all 0.3s ease;
+}
+
+/* Aumenta e move ao passar o mouse nos itens do menu */
+#menu a:hover, #menu button:hover {
+    transform: scale(1.05) translateY(-2px);
+}
+
+/* Estilização do botão de mudar o tema, tentei deixar igual aos demais itens do menu */
+#menu button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: transparent;
+    color: #d81b60;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; transform 0.3s;
+}
+
+#menu button:hover {
+    background-color: #cf37da;
+    color: #f8f8f8;
+    transform: scale(1.05);
+}
+
+#menu button:active {
+    background-color: #d81b60;
+}
+
+/* Menu de navegação: layout horizontal com espaçamento e fundo com blur */
+#menu {
+    display: flex; /* deixa na mesma linha*/ 
+    flex-direction: row; 
+    justify-content: center; /* Alinha no centro */ 
+    background-color: #f3e5f5;
+    backdrop-filter: blur(4px);
+    gap: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+}
+
+/* Estiliza os links do menu*/
+#menu a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #d81b60;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/*Muda a cor ao passar o mouse*/
+#menu a:hover {
+    background-color: #cf37da;
+    color: #f8f8f8;
+}
+
+/* Muda a cor ao clicar*/
+#menu a:active {
+    background-color: #d81b60;
+}
+
+
+/* ============================== */
+/* SEÇÃO: Linha do Tempo (Timeline)*/
+/* ============================== */
+
+/* Linha do tempo: coluna com eventos e marcador visual à esquerda */
+.linha-tempo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 3px solid #830d8b;
+    padding-left: 20px;
+}
+
+h2 {
+    color: #d81b60;
+    margin: 35px;
+    font-size: 30px;
+}
+
+
+/* Container da linha do tempo: adiciona espaçamento interno e externo */
+#timeline {
+  padding: 20px;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+/* Cartões de eventos da linha do tempo */
+.evento, .evento1{
+    position: relative; /* Permite posicionar o marcador com ::before */
+    background: linear-gradient(to right, #f8f8f8, #e5e5e5);
+    border: 2px solid #830d8b;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Marcador circular ao lado do evento */
+.evento::before {
+    content: '';/* Cria um elemento decorativo */
+    position: absolute; /* Posicionamento manual dentro do .evento */
+    left: -10px; /* Posiciona à esquerda do cartão */
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background-color: #830d8b;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Animação de entrada dos eventos na linha do tempo */
+.evento {
+    opacity: 0; /* Começa invisível */
+    transform: translateX(-50px); /* Deslocado pra esquerda */
+    transition: all 0.6s ease; /* Animação suave */
+}
+
+.evento.mostrar {
+    opacity: 1;
+    transform: translateX(0); /* Volta pro lugar */
+}
+
+/* ===================== */
+/* SEÇÃO: Sobre mim      */
+/* ===================== */
+
+
+#apresentacao {
+    background: linear-gradient(to right, #f8f8f8, #e5e5e5);
+    padding: 40px;
+    margin: 40px;
+    border: 2px solid #830d8b;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Container da seção de apresentação: alinha texto e imagem lado a lado */
+.conteudo-apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.texto-apresentacao h2 {
+    text-align: center;
+    color: #d81b60;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.texto-apresentacao p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* ===================== */
+/* SEÇÃO:   Formação     */
+/* ===================== */
+
+
+/* Seção de Formação: bloco com fundo em gradiente e bordas arredondadas */
+#formacao {
+    background: linear-gradient(to right, #f8f8f8, #e5e5e5);
+    padding: 40px;
+    margin: 40px;
+    border: 2px solid #830d8b;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===================== */
+/* SEÇÃO: Contato        */
+/* ===================== */
+
+
+/* Seção de Contato: formulário destacado com bordas e fundo claro */
+#contato {
+    background-color: #f8f8f8;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 2px solid #830d8b;
+}
+
+#contato h2 {
+    text-align: center;
+    color: #d81b60;
+    margin-bottom: 30px;
+}
+
+/* Layout do formulário: empilhado, centralizado e com espaçamento */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+/* Estilo dos campos de entrada e da área de texto */
+.formulario input,
+.formulario textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #d36da8;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fff;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #830d8b;
+}
+
+.formulario button {
+    background-color: #d81b60;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #9c27b0;
+}
+
+/* ===================== */
+/* SEÇÃO: Portfólio      */
+/* ===================== */
+
+#portfolio h2 {
+  text-align: center;
+  color: #d81b60; 
+  font-size: 2rem;   
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Container dos projetos com layout flexível e espaçamento */
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Cartão individual de projeto */
+.card {
+    background: linear-gradient(to right, #fefefe, #f3e5f5);
+    border: 2px solid #830d8b;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.thumb-projeto {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #830d8b;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #333;
+}
+
+
+footer {
+    background-color: #D36DA8;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+/* MODO ESCURO */
+.modo-escuro {
+    background-color: #111;
+    color: #f1f1f1;
+}
+
+.modo-escuro #header {
+    background-color: #830d8b;
+}
+
+/* Cores do menu no modo escuro */
+.modo-escuro #menu {
+    background: linear-gradient(to right, #2e2e2e, #3a3a3a);
+}
+
+.modo-escuro #menu a {
+    color: #d81b60;
+
+}
+
+.modo-escuro #menu a:hover {
+    background-color: #9c27b0;
+    color: #ffffff;
+}
+
+.modo-escuro #apresentacao {
+    background: #a29898;;
+    border-color: #9c27b0;
+}
+
+.modo-escuro .texto-apresentacao h2 {
+    color: deeppink;
+}
+
+.modo-escuro .texto-apresentacao p {
+    color: #f1f1f1;
+}
+
+.modo-escuro .evento1 {
+    background: linear-gradient(to right, #2e2e2e, #3a3a3a);
+    border-color: #9c27b0;
+    color: #f1f1f1;
+}
+
+/* Estilização dos eventos no modo escuro */
+.modo-escuro .evento {
+    background: linear-gradient(to right, #2e2e2e, #3a3a3a);
+    border-color: #9c27b0;
+    color: #f1f1f1;
+}
+
+.modo-escuro .evento::before {
+    background-color: #f06292;
+    border-color: white;
+}
+
+.modo-escuro footer {
+    background-color: #830d8b;
+    color: #f1f1f1;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  #menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .conteudo-apresentacao {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+}

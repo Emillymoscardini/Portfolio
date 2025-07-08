@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <!-- Cabeçalho com título e menu de navegação -->
+    <nav id="header">
+        <h1 class="titulo1">Emilly Moscardini</h1>
+        <!-- Menu com links para outras páginas e botão de tema -->
+        <div id="menu">
+                <a href="index.html">Sobre Mim</a>
+                <a href="formação.html">Minha Formação</a>
+                <a href="portfolio.html">Portfólio</a>
+                <button id="botao-tema">Mudar Tema</button>      
+        </div>
+    </nav>
+
+<!-- Seção de formulário de contato -->
+<section id="contato">
+    <h2>Entre em Contato</h2>
+    
+    <form action="#" method="post" class="formulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+
+    <!-- Seção com informações de contato -->
+    <selection id="contatos">
+        <h2>Meus contatos</h2>
+        <div class="linha-tempo">
+            <div class="evento">
+                <h3>Email</h3>
+                <p>moscardiniemilly@gmail.com</p>
+            </div>
+
+            <div class="evento">
+                <h3>Celular</h3>
+                <p>51 980370042</p>
+            </div>
+
+            <div class="evento">
+                <h3>Linkedin</h3>
+                <p>www.linkedin.com/in/emilly-moscardini</p>
+            </div>
+
+            <div class="evento">
+                <h3>Github</h3>
+                <p>https://github.com/Emillymoscardini</p>
+            </div>
+            
+        </div>
+    </selection>
+ 
+    <!-- Rodapé com créditos -->
+<footer>© 2025 -  Emilly Barbosa Moscardini</footer>
+
+<!-- Script JavaScript para funcionalidades como mudança de tema -->
+<script src="sobre.js"></script>
+
+</body>
